@@ -47,10 +47,10 @@ export function makeInstallerURL(
   const racketPlatform = RACKET_PLATFORMS[platform];
   const racketExt = RACKET_EXTS[platform];
 
-  let base = `https://mirror.racket-lang.org/installers/${version}`;
+  let base = `https://download.racket-lang.org/installers/${version}`;
   const prefix = distribution === 'minimal' ? 'racket-minimal' : 'racket';
   let maybeOS = '';
-  let maybeSuffix = variant === 'CS' ? '-cs' : '';
+  let maybeSuffix = variant === 'CS' ? '-cs' : ''; 
   if (version === 'current') {
     base = 'https://www.cs.utah.edu/plt/snapshots/current/installers';
     maybeSuffix = variant === 'CS' ? '-cs' : '-bc';
